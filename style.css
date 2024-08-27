@@ -1,0 +1,289 @@
+/* Reset Custom CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('/Background Img.jpg') center/cover no-repeat;
+    height: 100dvh;
+    width: 100Dvw;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+li{
+    list-style: none;
+}
+
+/* Navigation Sec */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    /* background-color: #dededd; */
+    padding: 1rem 2rem;
+}
+
+/* Logo Sec */
+nav .logo-sec a{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: .5rem;
+}
+
+.logo-sec a img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Lists Sec */
+nav .lists{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.lists:hover li>a{
+    color: #dededd5e;
+    transition: all .4s ease-in-out;
+}
+
+.lists:hover li>a:hover{
+    color: #fff;
+    box-shadow: 0 2px currentColor;
+}
+
+/* Login-Btn Sec */
+nav .login-btn{
+    padding: 0.5rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.login-btn:hover{
+    background: #ddd;
+    /* box-shadow: 2px 2px 8px #ddd; */
+    box-shadow: 2px 2px 2px #fff, -2px -2px 2px #ddd;
+}
+
+/* Hamburger Sec */
+.hamburger{
+    position: relative;
+    display: none;
+}
+
+.hamburger .line{
+    position:absolute;
+    color: #fff;
+    height: 2px;
+    width: 1rem;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: .5s ease;
+}
+
+.hamburger .line:nth-child(2){
+    position: absolute;
+    top: .5rem;
+}
+
+.hamburger .line:nth-child(3){
+    position: absolute;
+    top: -.5rem;
+}
+
+/* Navigation Mobile View */
+@media (100px <= Width <= 550px){
+    nav .logo-sec>a>span{
+        font-size: 1.4rem;
+    }
+    nav .lists{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 8rem;
+        left: -100%;
+        width: 90%;
+        gap: 3rem;
+        transition: .4s linear;
+    }
+
+    nav .lists.active{
+        left: 0;
+    }
+
+    nav .lists a{
+        font: 1.2rem sans-serif;
+    }
+
+    .lists:hover li>a:hover {
+        color: #fff;
+        box-shadow: 0 0;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .hamburger.active .line:nth-child(1){
+        opacity: 0;
+    }
+    .hamburger.active .line:nth-child(2){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .hamburger.active .line:nth-child(3){
+        transform: translateY(8px) rotate(45deg);
+    }
+}
+
+
+
+.popup{
+    max-width: 70dvw;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+.popup-container{
+    display: flex;
+}
+
+.show-popup .popup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.show-popup .signup-container{
+    opacity: 0;
+    display: none;
+    transition: opacity .4s ease-in-out;
+}
+
+.login-container .form-details{
+    background: url('https://images.unsplash.com/photo-1720048170996-40507a45c720?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat ;
+}
+
+.signup-container .form-details{
+    background: url('https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+
+.form-details {
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    color: #fff;
+}
+
+.form-details h2{
+    margin: 1.5rem;
+}
+
+.form-filling{
+    padding: 3rem;
+    width: 100%;
+}
+
+.form-filling h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-sec{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.input-sec input{
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.input-sec label{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .4s ease-in-out;
+}
+.input-sec input:is(:valid, :focus) {
+    padding: 16px 15px 0;
+}
+
+.input-sec input:is(:valid, :focus) ~ label{
+    transform: translateY(-120%);
+    font-size: .8rem;
+}
+
+.form-filling .forgot-pass{
+    color: blue;
+}
+
+.form-filling .submit-btn{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.form-filling .bottom-link{
+    text-align: center;
+}
+
+.bottom-link a{
+    color: blue;
+}
+
+.popup .signup-container,
+.popup.show-signup .login-container{
+    display: none;
+}
+
+.popup.show-signup .signup-container{
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Mobile View */
+@media  (0px <= width <= 760px){
+    .form-details{
+        display: none;
+    }
+
+}
+

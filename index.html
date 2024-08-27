@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>User Login Poprtal</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <!-- Logo Section -->
+            <div class="logo-sec">
+                <a href="#">
+                    <img src="/User Logo.jpg" alt="User Logo">
+                    <span>Gaurav</span>
+                </a>
+            </div>
+
+            <!-- List Items -->
+            <ul  class="lists">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!-- Login Button -->
+            <button class="login-btn">Log-In</button>
+        </nav>
+    </header>
+
+    <!-- Popup Window -->
+    <section class="popup">
+
+        <!-- Popup Section 1 -->
+        <div class="popup-container login-container">
+
+            <!-- Form Basic Details -->
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, inventore?</p>
+            </div>
+
+            <!-- Form Filling -->
+            <div class="form-filling">
+                <h2>Login</h2>
+
+                <!-- Form -->
+                <form action="#">
+
+                    <!-- Form Input Sec -->
+                    <div class="input-sec">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    
+                    <div class="input-sec">
+                        <input type="text" required>
+                        <label>Password</label>
+                    </div>
+
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+
+                    <button  class="submit-btn">Log In</button>
+
+                    <p class="bottom-link">
+                        Don't have an account? <a href="#" id="signup-link">Sign up</a>
+                    </p>
+                    
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Popup Section 2 -->
+        <div class="popup-container signup-container">
+
+            <!-- Form Basic Details -->
+            <div class="form-details">
+                <h2>Sign Up</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, inventore?</p>
+            </div>
+
+            <!-- Form Filling -->
+            <div class="form-filling">
+                <h2>Signup</h2>
+
+                <!-- Form -->
+                <form action="#">
+
+                    <!-- Form Input Sec -->
+                    <div class="input-sec">
+                        <input type="text" required>
+                        <label>Enter Your Email</label>
+                    </div>
+                    
+                    <div class="input-sec">
+                        <input type="text" required>
+                        <label>Enter New Password</label>
+                    </div>
+
+                    <div class="terms">
+                    <input type="checkbox" id="check">
+                    <label for="check">Terms & conditions</label>
+                    </div>
+
+                    <button  class="submit-btn">Sign up</button>
+
+                    <p class="bottom-link">
+                        Already have an account? <a href="#" id="login-link">Log in</a>
+                    </p>
+                    
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
