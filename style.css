@@ -326,3 +326,8 @@ nav .login-btn{
         padding: 5rem;;
     }
 }
+@media (0px<=width<= 400px){
+    .form-filling {
+        padding: 1.5rem;
+    }
+}
