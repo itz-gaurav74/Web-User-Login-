@@ -7,6 +7,18 @@ hamburger.addEventListener('click', () => {
 });
 
 
+const navItem = document.querySelectorAll('.lists li a');
+
+navItem.forEach(item => {
+    item.addEventListener('click', () => {
+        setTimeout(() => {
+            hamburger.click();
+        },1000)
+    })
+})
+
+
+
 const logBtn = document.querySelector('.login-btn')
 
 logBtn.addEventListener('click', () => {
@@ -39,3 +51,8 @@ links.forEach(link => {
 
 
 
+const clsBtn = document.querySelector('#cls-btn');
+
+clsBtn.addEventListener('click', () => {
+    logBtn.click();
+})
