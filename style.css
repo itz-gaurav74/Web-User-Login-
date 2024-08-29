@@ -195,7 +195,7 @@ nav .login-btn{
 
 
 .form-details {
-    max-width: 320px;
+    max-width: 50dvw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -314,20 +314,21 @@ nav .login-btn{
 }
 
 /* Mobile View */
+
+@media (0px<=width<= 400px){
+    .form-filling {
+        padding: 1.5rem;
+    }
+}
+
 @media  (0px <= width <= 760px){
     .form-details{
         display: none;
     }
-
 }
 
 @media (550px<=width<= 760px){
     .form-filling {
         padding: 5rem;;
-    }
-}
-@media (0px<=width<= 400px){
-    .form-filling {
-        padding: 1.5rem;
     }
 }
